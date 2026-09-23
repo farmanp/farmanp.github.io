@@ -1,3 +1,11 @@
+# Farman Pirzada — personal notebook
+
+The redesigned site is in `site/`. Run `npm start` to review at **http://localhost:3000**. No dependency installation is needed for the new site. Run `npm run build` for static output in `public/`. See [site/README.md](site/README.md) for editing details.
+
+The original Gatsby source and documentation are preserved below.
+
+---
+
 # Gatsby Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
 
 ## A clean, beautiful and responsive portfolio template for Developers

@@ -5,14 +5,16 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "build": "node scripts/build.mjs",
+    "develop": "node scripts/serve.mjs",
+    "deploy": "npm run build && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs --production",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "legacy:develop": "gatsby develop",
+    "legacy:build": "gatsby build"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
