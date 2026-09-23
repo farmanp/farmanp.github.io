@@ -46,9 +46,11 @@ Fonts load from Google Fonts with system fallbacks. The profile photo is stored 
 
 ## Publishing
 
-Host the contents of `public/` on a static host. Pushing source changes to `master` does not itself run the deployment command.
+Every push to `master` automatically builds and publishes the site to GitHub Pages using [the deployment workflow](.github/workflows/pages.yml). No dependency installation is needed in CI.
 
-The existing `npm run deploy` command builds the site and publishes `public/` to the `gh-pages` branch. It requires the `gh-pages` CLI and GitHub write access; GitHub Pages must be configured to serve that branch. The new local preview and build do not require the legacy dependency installation.
+Check progress and logs in [GitHub Actions](https://github.com/farmanp/farmanp.github.io/actions/workflows/pages.yml): yellow means queued or running, green means successful, and red means failed. Each run has separate build and deploy jobs. You can also start a deployment with **Run workflow** on that page.
+
+GitHub Pages is configured to use GitHub Actions. The older `npm run deploy` command targets the legacy `gh-pages` branch and is no longer the publishing workflow.
 
 ## Project history
 
